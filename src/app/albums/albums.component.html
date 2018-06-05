@@ -1,9 +1,13 @@
+<hr/>
 <p>
-  albums works!
+  Albums Component!
 </p>
-
 <!--Display Album Details-->
-<app-album></app-album>
+<ng-container *ngFor="let a of albums">
+  <app-album [album]="a" (selectedAlbum)="onSelected($event)"></app-album>
+</ng-container>
 
 <!--Display Selected Album Songs-->
-<app-songs></app-songs>
+<ng-container *ngIf="selectedAlbum != ''">
+  <app-songs [album]="selectedAlbum"></app-songs>
+</ng-container>

@@ -1,7 +1,11 @@
+<hr/>
 <p>
-  songs works!
+  Songs Component!
 </p>
-
 <!--Display Song Details-->
-<app-song></app-song>
+<ng-container *ngFor="let s of songs">
+  <ng-container *ngIf="s.album === album">
+    <app-song [song]="s"></app-song>
+  </ng-container>
+</ng-container>
 
