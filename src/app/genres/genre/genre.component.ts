@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { Genre } from '../genre';
 
 @Component({
   selector: 'app-genre',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenreComponent implements OnInit {
 
+  @Input() genre: Genre[]; 
+  
   constructor() { }
 
   ngOnInit() {

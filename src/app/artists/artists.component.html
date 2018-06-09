@@ -1,7 +1,10 @@
-<p>
-  artists works!
-</p>
-
+<div id="artist">
+  <ol>
+    <li *ngFor="let ar of artists">
+        {{ar.name}}
+    </li>
+  </ol>
+</div>
 <!--Display Artist Details-->
 <app-artist></app-artist>
 
