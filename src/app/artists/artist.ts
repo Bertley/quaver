@@ -1,4 +1,6 @@
 export class Artist {
     name: string; 
-    genre: string; 
+    bio: string; 
+    socialMedia: string[]; 
+    genre: string[]; 
 }
