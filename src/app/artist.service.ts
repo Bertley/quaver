@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Artist } from './artists/artist'; 
-import { Observable, of } from 'rxjs'; 
+import {Injectable} from '@angular/core';
+import {Artist} from './artists/artist';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 export class ArtistService {
 
   artists: Artist[] = [
-    {name: 'Kanye West', genre: 'Hip-Hop/Rap'}, 
+    {name: 'Kanye West', genre: 'Hip-Hop/Rap'},
     {name: 'Drake', genre: 'Hip-Hop/Rap'},
     {name: 'Future', genre: 'Hip-Hop/Rap'},
     {name: 'G-Easy', genre: 'Hip-Hop/Rap'},
@@ -28,11 +28,12 @@ export class ArtistService {
     {name: 'Felix Cartal', genre: 'Hip-Hop/Rap'},
     {name: 'Digital Farm Animals', genre: 'Hip-Hop/Rap'},
     {name: 'Prince Fox', genre: 'Hip-Hop/Rap'},
-  ]
+  ];
 
-  getArtists(): Observable<Artist[]>{
-    return of(this.artists); 
+  getArtists(): Observable<Artist[]> {
+    return of(this.artists);
   }
 
-  constructor() { }
+  constructor() {
+  }
 }
