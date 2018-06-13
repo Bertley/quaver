@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Album} from '../album';
+import {CommsService} from '../../comms.service';
 
 @Component({
   selector: 'app-album',
@@ -9,16 +10,17 @@ import {Album} from '../album';
 export class AlbumComponent implements OnInit {
 
   @Input() album: Album[];
-  @Output() selectedAlbum = new EventEmitter<string>();
+  albumSelected = '';
 
-  constructor() {
+  constructor(private comms: CommsService) {
   }
 
   ngOnInit() {
+    this.comms.albumSelected.subscribe(data => this.albumSelected = data);
   }
 
   onSelection(selected: string) {
-    this.selectedAlbum.emit(selected);
+    this.comms.selected('album', selected);
   }
 
 }

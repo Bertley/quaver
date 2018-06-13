@@ -210,7 +210,7 @@ export class AlbumService {
       name: `Next Season`,
       year: 2018,
       artist: 'Felix Cartal',
-      cover: ``
+      cover: `https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2F41b197698a5b8d2757b6d6c5feb72c32.1000x1000x1.png`
     },
     {
       name: `Tokyo Nights`,

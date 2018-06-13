@@ -4,10 +4,10 @@
 </p>
 <!--Display Album Details-->
 <ng-container *ngFor="let a of albums">
-  <app-album [album]="a" (selectedAlbum)="onSelected($event)"></app-album>
+  <app-album [album]="a"></app-album>
 </ng-container>
 
 <!--Display Selected Album Songs-->
-<ng-container *ngIf="selectedAlbum != ''">
-  <app-songs [album]="selectedAlbum"></app-songs>
+<ng-container *ngIf="albumSelected != ''">
+  <app-songs [album]="albumSelected"></app-songs>
 </ng-container>
