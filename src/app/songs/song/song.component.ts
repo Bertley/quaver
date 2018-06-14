@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Song} from '../song';
+import {CommsService} from '../../comms.service';
 
 @Component({
   selector: 'app-song',
@@ -9,10 +10,17 @@ import {Song} from '../song';
 export class SongComponent implements OnInit {
 
   @Input() song: Song[];
+  songSelected = '';
 
-  constructor() { }
+  constructor(private comms: CommsService) {
+  }
 
   ngOnInit() {
+    this.comms.songSelected.subscribe(data => this.songSelected = data);
+  }
+
+  onSelection(selected: string) {
+    this.comms.selected('song', selected);
   }
 
 }

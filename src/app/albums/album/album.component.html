@@ -1,4 +1,4 @@
-<div class="container" (click)="onSelection(album.name)">
+<div class="container selectionItem" (click)="onSelection(album.name)" [class.selected]="album.name===albumSelected">
   <div><img src="{{album.cover}}"/></div>
   <div>{{album.name}}</div>
   <div>{{album.year}}</div>

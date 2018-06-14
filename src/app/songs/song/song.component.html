@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container selectionItem" (click)="onSelection(song.name)" [class.selected]="song.name===songSelected">
   <div>{{song.name}}</div>
   <div>{{song.trackIndex}}</div>
   <div>{{song.trackTime}}</div>

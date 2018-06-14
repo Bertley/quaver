@@ -10,3 +10,20 @@ hr {
 h1 {
   color: #bababa;
 }
+
+.selectionItem:hover {
+  background-color: #383838;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #33618a;
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+.selected:hover {
+  background-color: #33618a;
+  color: #1e1e1e;
+  font-weight: bold;
+}
