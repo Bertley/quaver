@@ -11,6 +11,7 @@ import { AlbumComponent } from './albums/album/album.component';
 import { SongsComponent } from './songs/songs.component';
 import { SongComponent } from './songs/song/song.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './header/header.component';
     AlbumComponent,
     SongsComponent,
     SongComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

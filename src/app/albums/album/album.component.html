@@ -1,6 +1,7 @@
 <div class="container selectionItem" (click)="onSelection(album.name)" [class.selected]="album.name===albumSelected">
-  <div><img src="{{album.cover}}"/></div>
-  <div>{{album.name}}</div>
-  <div>{{album.year}}</div>
-  <!--<div>{{album.artist}}</div>-->
+  <div class="d-inline-block"><img class="d-inline-block" src="{{album.cover}}"/></div>
+  <div class="albumDetails d-inline-block">
+    <div>{{album.name}}</div>
+    <div>{{album.year}}</div>
+  </div>
 </div>
