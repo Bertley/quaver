@@ -1,4 +1,4 @@
 export class Artist {
-    name: string; 
-    genre: string; 
+  name: string;
+  genre: string;
 }

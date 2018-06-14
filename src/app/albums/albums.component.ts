@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Album} from './album';
 import {AlbumService} from '../album.service';
 import {CommsService} from '../comms.service';
@@ -10,6 +10,8 @@ import {CommsService} from '../comms.service';
 })
 export class AlbumsComponent implements OnInit {
 
+  title = 'Albums';
+  @Input() artist: string;
   albums: Album[];
   albumSelected = '';
 

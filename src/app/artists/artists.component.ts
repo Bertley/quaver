@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Artist } from './artist'; 
-import { ArtistService } from '../artist.service'; 
+import {Component, OnInit, Input} from '@angular/core';
+import {Artist} from './artist';
+import {ArtistService} from '../artist.service';
+import {CommsService} from '../comms.service';
 
 @Component({
   selector: 'app-artists',
@@ -9,15 +10,16 @@ import { ArtistService } from '../artist.service';
 })
 export class ArtistsComponent implements OnInit {
 
-  artist: Artist; 
-  artists: Artist[]; 
+  title = 'Artists';
+  @Input() genre: string;
+  artists: Artist[];
+  artistSelected = '';
 
-  constructor(
-    private artistService: ArtistService
-  ) { }
-
-  ngOnInit() {
-    this.artistService.getArtists().subscribe(ar =>this.artists = ar); 
+  constructor(private artistService: ArtistService, private comms: CommsService) {
   }
 
+  ngOnInit() {
+    this.artistService.getArtists().subscribe(ar => this.artists = ar);
+    this.comms.artistSelected.subscribe(data => this.artistSelected = data);
+  }
 }

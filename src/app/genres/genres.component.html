@@ -1,13 +1,11 @@
-<div id="genres">
-  <div *ngFor="let g of genres"
-        id="genre-{{ g.id}}"
-        >
-    <h1>{{g.name}}</h1>
-  </div>
-</div>
-
+<h1>{{title}}</h1>
+<hr/>
 <!--Display Genre Details-->
-<app-genre></app-genre>
+<ng-container *ngFor="let g of genres">
+  <app-genre [genre]="g"></app-genre>
+</ng-container>
 
 <!--Display Selected Genre Artists-->
-<app-artists></app-artists>
+<ng-container *ngIf="genreSelected != ''">
+  <app-artists [genre]="genreSelected"></app-artists>
+</ng-container>

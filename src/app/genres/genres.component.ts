@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Genre } from './genre'; 
-import { GenreService } from '../genre.service'; 
+import {Component, OnInit} from '@angular/core';
+import {Genre} from './genre';
+import {GenreService} from '../genre.service';
+import {CommsService} from '../comms.service';
 
 @Component({
   selector: 'app-genres',
@@ -9,15 +10,16 @@ import { GenreService } from '../genre.service';
 })
 export class GenresComponent implements OnInit {
 
-  genre: Genre; 
-  genres: Genre[]; 
-  
-  constructor(
-    private genreService: GenreService
-  ) { }
+  title = 'Genres';
+  genres: Genre[];
+  genreSelected = '';
+
+  constructor(private genreService: GenreService, private comms: CommsService) {
+  }
 
   ngOnInit() {
-    this.genreService.getGenres().subscribe(gs => this.genres = gs); 
+    this.genreService.getGenres().subscribe(gs => this.genres = gs);
+    this.comms.genreSelected.subscribe(data => this.genreSelected = data);
   }
 
 }

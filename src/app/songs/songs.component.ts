@@ -9,6 +9,7 @@ import {SongService} from '../song.service';
 })
 export class SongsComponent implements OnInit {
 
+  title = 'Songs';
   @Input() album: string;
   songs: Song[];
 

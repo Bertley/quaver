@@ -1,10 +1,10 @@
+<h1>{{title}}</h1>
 <hr/>
-<p>
-  Albums Component!
-</p>
 <!--Display Album Details-->
 <ng-container *ngFor="let a of albums">
-  <app-album [album]="a"></app-album>
+  <ng-container *ngIf="a.artist === artist">
+    <app-album [album]="a"></app-album>
+  </ng-container>
 </ng-container>
 
 <!--Display Selected Album Songs-->
