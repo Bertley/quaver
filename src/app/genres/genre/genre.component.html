@@ -1,3 +1,4 @@
 <div class="container selectionItem" (click)="onSelection(genre.name)" [class.selected]="genre.name===genreSelected">
+  <div><img class="img-fluid genre-img" src="{{genre.cover}}"/></div>
   <div>{{genre.name}}</div>
 </div>
