@@ -1,6 +1,10 @@
 <div class="container selectionItem" (click)="onSelection(song.name)" [class.selected]="song.name===songSelected">
-  <div>{{song.name}}</div>
-  <div>{{song.trackIndex}}</div>
-  <div>{{song.trackTime}}</div>
-  <div>{{song.album}}</div>
+  <div class="row">
+    <div class="col-1">
+      <div>{{song.trackIndex}}</div>
+    </div>
+    <div class="col-10">
+      <div>{{song.name}}</div>
+    </div>
+  </div>
 </div>

@@ -23,10 +23,22 @@ export class CommsService {
 
   selected(focus: string, selection: string) {
     if (focus.toLowerCase() === 'genre') {
+      // Clear Selections
+      this.artist.next('');
+      this.album.next('');
+      this.song.next('');
+      // Assign Selection
       this.genre.next(selection);
     } else if (focus.toLowerCase() === 'artist') {
+      // Clear Selections
+      this.album.next('');
+      this.song.next('');
+      // Assign Selection
       this.artist.next(selection);
     } else if (focus.toLowerCase() === 'album') {
+      // Clear Selections
+      this.song.next('');
+      // Assign Selection
       this.album.next(selection);
     } else if (focus.toLowerCase() === 'song') {
       this.song.next(selection);
