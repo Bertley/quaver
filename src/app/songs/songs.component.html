@@ -1,9 +1,11 @@
-<h1>{{title}}</h1>
-<hr/>
-<!--Display Song Details-->
-<ng-container *ngFor="let s of songs">
-  <ng-container *ngIf="s.album === album">
-    <app-song [song]="s"></app-song>
+<div class="sectionBlock">
+  <h1>{{title}}</h1>
+  <hr/>
+  <!--Display Song Details-->
+  <ng-container *ngFor="let s of songs">
+    <ng-container *ngIf="s.album === album">
+      <app-song [song]="s"></app-song>
+    </ng-container>
   </ng-container>
-</ng-container>
+</div>
 

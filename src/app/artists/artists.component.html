@@ -1,11 +1,13 @@
-<h1>{{title}}</h1>
-<hr/>
-<!--Display Artist Details-->
-<ng-container *ngFor="let a of artists">
-  <ng-container *ngIf="a.genre === genre">
-    <app-artist [artist]="a"></app-artist>
+<div class="sectionBlock">
+  <h1>{{title}}</h1>
+  <hr/>
+  <!--Display Artist Details-->
+  <ng-container *ngFor="let a of artists">
+    <ng-container *ngIf="a.genre === genre">
+      <app-artist [artist]="a"></app-artist>
+    </ng-container>
   </ng-container>
-</ng-container>
+</div>
 
 <!--Display Selected Artists Albums-->
 <ng-container *ngIf="artistSelected != ''">

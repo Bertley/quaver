@@ -1,13 +1,15 @@
-<h1>{{title}}</h1>
-<hr/>
-<!--Display Genre Details-->
-<div class="container-fluid">
+<div class="sectionBlock">
+  <h1>{{title}}</h1>
+  <hr/>
+  <!--Display Genre Details-->
+  <div class="container-fluid">
     <div class="row genre">
-        <ng-container *ngFor="let g of genres">
-            <app-genre [genre]="g"></app-genre>
-        </ng-container>
+      <ng-container *ngFor="let g of genres">
+        <app-genre [genre]="g"></app-genre>
+      </ng-container>
     </div>
- </div>
+  </div>
+</div>
 
 <!--Display Selected Genre Artists-->
 <ng-container *ngIf="genreSelected != ''">

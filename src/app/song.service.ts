@@ -6,7 +6,6 @@ import {Observable, of} from 'rxjs';
   providedIn: 'root'
 })
 export class SongService {
-
   songs: Song[] = [
     {name: `Feel The Love`, trackIndex: 1, album: 'Kids See Ghosts'},
     {name: `Fire`, trackIndex: 2, album: 'Kids See Ghosts'},
@@ -383,7 +382,7 @@ export class SongService {
     {name: `Wherever`, trackIndex: 10, album: `Next Season`},
     {name: `Everyone But Me`, trackIndex: 11, album: `Next Season`},
     {name: `Runaway`, trackIndex: 12, album: `Next Season`},
-    {name: `Falling Dwn`, trackIndex: 13, album: `Next Season`},
+    {name: `Falling Down`, trackIndex: 13, album: `Next Season`},
     {name: `Mood`, trackIndex: 14, album: `Next Season`},
     {name: `Get What You Give`, trackIndex: 15, album: `Next Season`},
     {name: `Overused`, trackIndex: 16, album: `Next Season`},
