@@ -1,4 +1,4 @@
-<div class="selectionItem col p-5" (click)="onSelection(genre.name)" [class.selected]="genre.name===genreSelected">
+<div class="selectionItem col p-5 genreBlock" (click)="onSelection(genre.name)" [class.selected]="genre.name===genreSelected">
   <div><img class="img-fluid genre-img" src="{{genre.cover}}"/></div>
-  <div>{{genre.name}}</div>
 </div>
+<div class="genreTitle">{{genre.name}}</div>

@@ -8,6 +8,7 @@ import { AlbumsComponent } from './albums/albums.component';
 import { SongsComponent } from './songs/songs.component';
 
 const routes: Routes = [
+  {path: '', component: GenresComponent},
   {path: 'genres', component: GenresComponent},
   {path: 'artists', component: ArtistsComponent},
   {path: 'albums', component: AlbumsComponent},

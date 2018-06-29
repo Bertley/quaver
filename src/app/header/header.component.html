@@ -1,36 +1,31 @@
 <nav class="navbar">
   <h1><a routerLink="">{{title}}</a></h1>
-  <!--<ul>-->
-    <!--<li><a routerLink="genres">Genres</a></li>-->
-    <!--<ng-container *ngIf="genreSelected !== ''">-->
-      <!--<li><a routerLink="artists">Artists</a></li>-->
-    <!--</ng-container>-->
-    <!--<ng-container *ngIf="artistSelected !== ''">-->
-      <!--<li><a routerLink="albums">Albums</a></li>-->
-    <!--</ng-container>-->
-    <!--<ng-container *ngIf="albumSelected !== ''">-->
-      <!--<li><a routerLink="songs">Songs</a></li>-->
-    <!--</ng-container>-->
-  <!--</ul>-->
 
   <!--<div class="">-->
   <!--<input type="text" name="search" class="form-control d-inline" placeholder="">-->
   <!--<button name="searchBtn" class="d-inline">Find</button>-->
   <!--</div>-->
 </nav>
+
 <div class="sideNav">
   <ul>
     <a routerLink="genres">
       <li>Genres</li>
     </a>
-    <a routerLink="artists">
-      <li>Artists</li>
-    </a>
-    <a routerLink="albums">
-      <li>Albums</li>
-    </a>
-    <a routerLink="songs">
-      <li>Songs</li>
-    </a>
+    <ng-container *ngIf="genreSelected !== ''">
+      <a routerLink="artists">
+        <li>Artists</li>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="artistSelected !== ''">
+      <a routerLink="albums">
+        <li>Albums</li>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="albumSelected !== ''">
+      <a routerLink="songs">
+        <li>Songs</li>
+      </a>
+    </ng-container>
   </ul>
 </div>

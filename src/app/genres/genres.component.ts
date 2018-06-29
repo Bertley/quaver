@@ -3,6 +3,8 @@ import {Genre} from './genre';
 import {GenreService} from '../genre.service';
 import {CommsService} from '../comms.service';
 
+import {ApiService} from '../api.service';
+
 @Component({
   selector: 'app-genres',
   templateUrl: './genres.component.html',
@@ -14,11 +16,13 @@ export class GenresComponent implements OnInit {
   genres: Genre[];
   genreSelected = '';
 
-  constructor(private genreService: GenreService, private comms: CommsService) {
+  constructor(private genreService: GenreService, private comms: CommsService, private api: ApiService) {
   }
 
   ngOnInit() {
-    this.genreService.getGenres().subscribe(gs => this.genres = gs);
+    // this.genreService.getGenres().subscribe(gs => this.genres = gs);
+    this.api.getGenres().subscribe(data => this.genres = data);
+    console.log(this.genres);
     this.comms.genreSelected.subscribe(data => this.genreSelected = data);
   }
 

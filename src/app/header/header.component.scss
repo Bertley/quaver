@@ -4,10 +4,9 @@ nav {
 
 .sideNav {
   background-color: #213143;
-  position: absolute;
-  top: 72px;
   height: 100%;
   width: 150px;
+  float: left;
 }
 
 ul {
@@ -20,12 +19,27 @@ ul a {
   font-size: 1.1rem;
 }
 
+ul a:hover {
+  color: black;
+  font-weight: bold;
+}
+
 ul li {
   padding: 20px 0 20px 30px;
+  border-top: 5px solid #232528;
 }
 
 ul li:hover {
   background-color: white;
+}
+
+h1 a {
+  color: #2b7bff;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #0060ff;
 }
 
 
