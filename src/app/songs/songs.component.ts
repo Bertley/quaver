@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Song} from './song';
 import {SongService} from '../song.service';
+import {CommsService} from '../comms.service';
 
 @Component({
   selector: 'app-songs',
@@ -10,14 +11,16 @@ import {SongService} from '../song.service';
 export class SongsComponent implements OnInit {
 
   title = 'Songs';
-  @Input() album: string;
+  // @Input() album: string;
   songs: Song[];
+  albumSelected = '';
 
-  constructor(private songService: SongService) {
+  constructor(private songService: SongService, private comms: CommsService) {
   }
 
   ngOnInit() {
     this.songService.getSongs().subscribe(data => this.songs = data);
+    this.comms.albumSelected.subscribe(data => this.albumSelected = data);
   }
 
 }

@@ -11,15 +11,17 @@ import {CommsService} from '../comms.service';
 export class AlbumsComponent implements OnInit {
 
   title = 'Albums';
-  @Input() artist: string;
+  // @Input() artist: string;
   albums: Album[];
-  albumSelected = '';
+  // albumSelected = '';
+  artistSelected = '';
 
   constructor(private albumService: AlbumService, private comms: CommsService) {
   }
 
   ngOnInit() {
     this.albumService.getAlbums().subscribe(data => this.albums = data);
-    this.comms.albumSelected.subscribe(data => this.albumSelected = data);
+    // this.comms.albumSelected.subscribe(data => this.albumSelected = data);
+    this.comms.artistSelected.subscribe(data => this.artistSelected = data);
   }
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Artist} from '../artist';
 import {CommsService} from '../../comms.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-artist',
@@ -12,7 +13,7 @@ export class ArtistComponent implements OnInit {
   @Input() artist: Artist[];
   artistSelected = '';
 
-  constructor(private comms: CommsService) {
+  constructor(private comms: CommsService, private router: Router) {
   }
 
   ngOnInit() {
@@ -21,6 +22,7 @@ export class ArtistComponent implements OnInit {
 
   onSelection(selected: string) {
     this.comms.selected('artist', selected);
+    this.router.navigate(['albums']);
   }
 
 }

@@ -3,7 +3,7 @@
   <hr/>
   <!--Display Song Details-->
   <ng-container *ngFor="let s of songs">
-    <ng-container *ngIf="s.album === album">
+    <ng-container *ngIf="s.album === albumSelected">
       <app-song [song]="s"></app-song>
     </ng-container>
   </ng-container>

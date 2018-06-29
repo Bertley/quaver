@@ -3,13 +3,13 @@
   <hr/>
   <!--Display Artist Details-->
   <ng-container *ngFor="let a of artists">
-    <ng-container *ngIf="a.genre === genre">
+    <ng-container *ngIf="a.genre === genreSelected">
       <app-artist [artist]="a"></app-artist>
     </ng-container>
   </ng-container>
 </div>
 
 <!--Display Selected Artists Albums-->
-<ng-container *ngIf="artistSelected != ''">
-  <app-albums [artist]="artistSelected"></app-albums>
-</ng-container>
+<!--<ng-container *ngIf="artistSelected != ''">-->
+  <!--<app-albums [artist]="artistSelected"></app-albums>-->
+<!--</ng-container>-->

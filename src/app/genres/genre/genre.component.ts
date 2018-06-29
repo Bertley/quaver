@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Genre} from '../genre';
 import {CommsService} from '../../comms.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-genre',
@@ -12,7 +13,7 @@ export class GenreComponent implements OnInit {
   @Input() genre: Genre[];
   genreSelected = '';
 
-  constructor(private comms: CommsService) {
+  constructor(private comms: CommsService, private router: Router) {
   }
 
   ngOnInit() {
@@ -21,6 +22,7 @@ export class GenreComponent implements OnInit {
 
   onSelection(selected: string) {
     this.comms.selected('genre', selected);
+    this.router.navigate(['artists']);
   }
 
 }
