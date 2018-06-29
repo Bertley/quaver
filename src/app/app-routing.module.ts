@@ -6,13 +6,15 @@ import {GenresComponent} from './genres/genres.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { SongsComponent } from './songs/songs.component';
+import {LuckyComponent} from './lucky/lucky.component';
 
 const routes: Routes = [
   {path: '', component: GenresComponent},
   {path: 'genres', component: GenresComponent},
   {path: 'artists', component: ArtistsComponent},
   {path: 'albums', component: AlbumsComponent},
-  {path: 'songs', component: SongsComponent}
+  {path: 'songs', component: SongsComponent},
+  {path: 'lucky', component: LuckyComponent}
 ];
 
 @NgModule({

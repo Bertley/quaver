@@ -22,7 +22,6 @@ export class GenresComponent implements OnInit {
   ngOnInit() {
     // this.genreService.getGenres().subscribe(gs => this.genres = gs);
     this.api.getGenres().subscribe(data => this.genres = data);
-    console.log(this.genres);
     this.comms.genreSelected.subscribe(data => this.genreSelected = data);
   }
 

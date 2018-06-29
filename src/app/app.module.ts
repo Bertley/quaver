@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { LuckyComponent } from './lucky/lucky.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     SongsComponent,
     SongComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LuckyComponent
   ],
   imports: [
     BrowserModule,

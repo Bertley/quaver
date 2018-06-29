@@ -1,6 +1,7 @@
 <nav class="navbar">
-  <h1><a routerLink="">{{title}}</a></h1>
+  <h1 class="hvr-wobble-horizontal"><a routerLink="">{{title}}</a></h1>
 
+  <a routerLink="lucky">Feeling Lucky?</a>
   <!--<div class="">-->
   <!--<input type="text" name="search" class="form-control d-inline" placeholder="">-->
   <!--<button name="searchBtn" class="d-inline">Find</button>-->
@@ -10,7 +11,7 @@
 <div class="sideNav">
   <ul>
     <a routerLink="genres">
-      <li>Genres</li>
+      <li >Genres</li>
     </a>
     <ng-container *ngIf="genreSelected !== ''">
       <a routerLink="artists">

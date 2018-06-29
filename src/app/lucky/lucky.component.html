@@ -1,0 +1,26 @@
+<div class="sectionBlock">
+  <h1>{{title}}</h1>
+  <hr/>
+  <!--Display Genre Details-->
+  <div class="container-fluid">
+    <div class="row genre">
+      <div class="buttonContainer">
+        <div class="buttonBlock">
+          <button class="btn btn-primary btn-lg" (click)="rand('genre')">Genre</button>
+        </div>
+        <div class="buttonBlock">
+          <button class="btn btn-primary btn-lg" (click)="rand('artist')">Artist</button>
+        </div>
+        <div class="buttonBlock">
+          <button class="btn btn-primary btn-lg" (click)="rand('album')">Album</button>
+        </div>
+        <div class="buttonBlock">
+          <button class="btn btn-primary btn-lg" (click)="rand('song')">Song</button>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngIf="genre">
+      <div>{{genre.name}}</div>
+    </ng-container>
+  </div>
+</div>
