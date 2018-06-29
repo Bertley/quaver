@@ -14,12 +14,16 @@ import {Song} from './songs/song';
 export class ApiService {
 
   // Quaver API Endpoint
-  url = 'http://gkona.ca/quaverAPI.php';
-  key = '?key=letmein';
+  urlA = 'http://gkona.ca/quaverAPI.php';
+  keyA = '?key=letmein';
   type = '&type=';
   name = '&name=';
   filter = '&filter=';
   order = '&order=';
+
+  urlB = 'http://edialu.com/quaver/index.php'; 
+  keyB = '?key=ssdmiwhyup'; 
+  genre = '&genre=';
 
   // Error handler
   private handleError(error: HttpErrorResponse) {
@@ -31,19 +35,19 @@ export class ApiService {
   }
 
   getGenres(): Observable<Genre[]> {
-    return this.http.get<Genre[]>(this.url + this.key + this.type + 'genres').pipe(catchError(this.handleError));
+    return this.http.get<Genre[]>(this.urlA + this.keyA + this.type + 'genres').pipe(catchError(this.handleError));
   }
 
   getArtists(filter: string): Observable<Artist[]> {
-    return this.http.get<Artist[]>(this.url + this.key + this.type + 'artists' + this.filter + filter).pipe(catchError(this.handleError));
+    return this.http.get<Artist[]>(this.urlB + this.keyB + this.genre + 'all').pipe(catchError(this.handleError));
   }
 
   getAlbums(filter: string): Observable<Album[]> {
-    return this.http.get<Album[]>(this.url + this.key + this.type + 'albums' + this.filter + filter).pipe(catchError(this.handleError));
+    return this.http.get<Album[]>(this.urlA + this.keyA + this.type + 'albums' + this.filter + filter).pipe(catchError(this.handleError));
   }
 
   getSongs(filter: string): Observable<Song[]> {
-    return this.http.get<Song[]>(this.url + this.key + this.type + 'songs' + this.filter + filter).pipe(catchError(this.handleError));
+    return this.http.get<Song[]>(this.urlA + this.keyA + this.type + 'songs' + this.filter + filter).pipe(catchError(this.handleError));
   }
 
   constructor(private http: HttpClient) {
