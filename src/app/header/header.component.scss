@@ -1,3 +1,31 @@
 nav {
-  background-color: rgba(31, 68, 107, 0.4);
+  background-color: #213143;
 }
+
+.sideNav {
+  background-color: #213143;
+  position: absolute;
+  top: 72px;
+  height: 100%;
+  width: 150px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+ul li {
+  padding: 20px 0 20px 30px;
+}
+
+ul li:hover {
+  background-color: white;
+}
+
+
