@@ -1,5 +1,5 @@
 <div class="sectionBlock">
-  <h1>{{title}}</h1>
+  <h1>{{title}} of {{genreSelected}}</h1>
   <hr/>
   <!--Display Artist Details-->
   <ng-container *ngFor="let a of artists">
@@ -8,8 +8,3 @@
     </ng-container>
   </ng-container>
 </div>
-
-<!--Display Selected Artists Albums-->
-<!--<ng-container *ngIf="artistSelected != ''">-->
-  <!--<app-albums [artist]="artistSelected"></app-albums>-->
-<!--</ng-container>-->
